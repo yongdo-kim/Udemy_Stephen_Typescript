@@ -26,6 +26,7 @@ export class CustomMap {
     );
   }
 
+  //받는 쪽에서 인터페이스로 받기 때문에, 다른 파생 데이터들을 넣을 수 있음.
   addMarker(mappable: Mappable): void {
     const marker = new google.maps.Marker({
       map: this.googleMap,
