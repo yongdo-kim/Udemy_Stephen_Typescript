@@ -1,6 +1,8 @@
-export class NumberCollection {
+import { Sorter } from "./Sorter";
+
+export class NumberCollection extends Sorter {
   constructor(public data: number[]) {
-    this.data = data;
+    super();
   }
 
   //getter method : 호출시 메소드 ()없이 바로 소환가능
