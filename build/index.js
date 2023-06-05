@@ -1,8 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const NumberCollection_1 = require("./NumberCollection");
-const Sorter_1 = require("./Sorter");
-const sorter = new Sorter_1.Sorter(new NumberCollection_1.NumberCollection([10, 3, -5, 0]));
-sorter.sort();
-console.log(sorter.collection);
-//string은 인덱스를 통해 값을 가져올 수 있지만 업데이트는 불가능함.
+const MatchReader_1 = require("./MatchReader");
+const Summary_1 = require("./Summary");
+const matchReader = MatchReader_1.MatchReader.fromCsv('football.csv');
+const summary = Summary_1.Summary.winsAnalysisWithHtmlReport('Man United');
+matchReader.load();
+summary.buildAndPrintReport(matchReader.matches);

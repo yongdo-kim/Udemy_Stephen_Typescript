@@ -1,7 +1,8 @@
-import { NumberCollection } from "./NumberCollection";
+import { MatchReader } from './MatchReader';
+import { Summary } from './Summary';
 
-const sorter = new NumberCollection([10, 3, -5, 0]);
-sorter.sort();
-console.log(sorter.data);
+const matchReader = MatchReader.fromCsv('football.csv');
+const summary = Summary.winsAnalysisWithHtmlReport('Man United');
 
-//string은 인덱스를 통해 값을 가져올 수 있지만 업데이트는 불가능함.
+matchReader.load();
+summary.buildAndPrintReport(matchReader.matches);

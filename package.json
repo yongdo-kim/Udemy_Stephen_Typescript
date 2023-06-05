@@ -1,27 +1,19 @@
 {
-  "dependencies": {
-    "concurrently": "^8.1.0",
-    "nodemon": "^2.0.22"
-  },
-  "name": "typescript",
+  "name": "stats",
   "version": "1.0.0",
+  "description": "",
   "main": "index.js",
-  "devDependencies": {},
   "scripts": {
     "start:build": "tsc -w",
     "start:run": "nodemon build/index.js",
     "start": "concurrently npm:start:*"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/yongdo-kim/stephen_typescript.git"
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/yongdo-kim/stephen_typescript/issues"
-  },
-  "homepage": "https://github.com/yongdo-kim/stephen_typescript#readme",
-  "description": ""
+  "dependencies": {
+    "@types/node": "^18.15.11",
+    "concurrently": "^8.0.1",
+    "nodemon": "^2.0.22"
+  }
 }
