@@ -2,6 +2,7 @@ import axios from 'axios';
 
 const url = 'https://jsonplaceholder.typicode.com/todos/1';
 
+//interface는 런타임 동작보다는 컴파일 타임에 타입을 확인하는 용도로 자주 사용
 interface Todo {
   id: number;
   title: string;
